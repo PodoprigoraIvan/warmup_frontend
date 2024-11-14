@@ -1,0 +1,44 @@
+.merchandize-section{
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // width: 70rem; 58%
+    width: 58%;
+    &__merchandize-title{
+        margin-top: 7.5rem;
+        margin-bottom: 0;
+        // width:55rem; 45%
+        width: 95%;
+    }
+    &__desc{
+        font-family: 'Inter', sans-serif;
+        // width:46rem; 37%
+        width: 75%;
+        margin: 3rem;
+    }
+}
+
+.prices{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'RF Dewi light';
+    &__image{
+        width: 15vw;
+        aspect-ratio: 1;
+    }
+    li{
+        list-style: none;
+    }
+    p{
+        text-align: left;
+        margin-top: 0px;
+        font-size: 1.5rem;
+    }
+    sup{
+        vertical-align: super;
+        font-size: 1rem;
+    }
+}
