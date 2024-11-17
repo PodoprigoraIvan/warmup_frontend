@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <script src="main.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">
+            Contact list web app
+        </h1>
+        <div class="adding-wrapper">
+            <label for="name" class="adding-wrapper__label label">Name</label>
+            <input name="name" type="text" class="adding-wrapper__input input-text" id="name-input">
+            <label for="vacancy" class="adding-wrapper__label label">Vacancy</label>
+            <input name="vacancy" type="text" class="adding-wrapper__input input-text" id="vacancy-input">
+            <label for="phone_number" class="adding-wrapper__label label">Phone number</label>
+            <input name="phone_number" type="text" class="adding-wrapper__input input-text" id="phone-input">
+            <p class="adding-wrapper__error-msg error-msg">Error</p>
+            <button class="adding-wrapper__add-btn interface-btn">Add +</button>
+            <button class="adding-wrapper__clear-fields-btn interface-btn">Clear fields</button>
+        </div>
+    </header>
+    <main class="contacts-display">
+        <button class="contacts-display__clear-list-btn interface-btn">Clear list</button>
+        <button class="contacts-display__search-btn interface-btn">Search</button>
+        <div class="contacts-display__letters-list letters-list">
+            <label class="letters-list__letters-list-item">
+                <input type="radio" name="letters" value="All" checked>
+                <span value="All"></span>
+            </label>
+        </div>
+        <div class="contacts-display__contacts-list contacts-list">
+        </div>
+
+        <div class="main__edit-popup edit-popup">
+            <div class="edit-popup--active__inner inner">
+                <h2 class="inner__title">Edit</h2>
+                <label for="name" class="inner__label label">Name</label>
+                <input name="name" type="text" class="inner__input input-text" id="edit-name-input">
+                <label for="vacancy" class="inner__label label">Vacancy</label>
+                <input name="vacancy" type="text" class="inner__input input-text" id="edit-vacancy-input">
+                <label for="phone_number" class="inner__label label">Phone number</label>
+                <input name="phone_number" type="text" class="inner__input input-text" id="edit-phone-input">
+                <p class="inner__error-msg error-msg">Error</p>
+                <button class="inner__close-btn interface-btn">X</button>
+                <button class="inner__edit-btn interface-btn">edit</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

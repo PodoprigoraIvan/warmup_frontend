@@ -1,0 +1,177 @@
+* {
+    position: relative;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+$input-color: #eeeeee;
+
+.title{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.input-text{
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 3px;
+    background-color: $input-color;
+    transition: all 0.5s;
+}
+
+.input-text:hover, .input-text:focus{
+    border-color: rgb(219, 87, 39);
+    background-color: $input-color;
+    outline: none;
+}
+
+.interface-btn{
+    background-color: rgb(39, 132, 132);
+    color: white;
+    border: solid 4px;
+    border-color: rgb(124, 185, 185);
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.5s;
+}
+
+.interface-btn:hover{
+    transform: scale(105%);
+    border-color: rgb(29, 177, 172);
+    cursor: pointer;
+}
+
+.error-msg{
+    transition: all 0.5s;
+    padding: 5px;
+    opacity: 0;
+}
+
+.error-msg--active{
+    transition: all 0.5s;
+    background-color: rgb(231, 136, 136);
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 1;
+}
+
+.adding-wrapper{
+    width: 300px;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: #b1ebf3;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #88d1db;
+    .input, .label{
+        display: block;
+    }
+    &__add-btn, &__clear-fields-btn {
+        margin: 5px 15px 0 0;
+    }
+    &__input, &__error-msg{
+        height: fit-content;
+        width: 220px;
+    }
+}
+
+.contacts-display{
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 50vw;
+}
+
+.letters-list{
+    padding: 10px 0 10px 0;
+    &__letters-list-item{
+        white-space: nowrap;
+        padding-right: 5px;
+        margin-right: 5px;
+        background-color: aquamarine;
+        border: solid 4px;
+        border-radius: 10px;
+        border-color: #669ca3;
+        border-left: none;
+    }
+    input {
+        appearance: none;
+        display: inline-block;
+        list-style: none;
+        border: solid 4px;
+        border-radius: 10px;
+        border-color: #88d1db;
+        background-color: rgb(218, 252, 252);
+        min-width: 2rem;
+        width:fit-content;
+        padding: 3px;
+        transition: all 0.3s;
+        margin: 0;
+    }
+    input::before{
+        content:attr(value);
+    }
+    input:hover{
+        transform: scale(105%);
+        cursor: pointer;
+    }
+    input:checked{
+        background-color: rgb(39, 132, 132);
+        color: white;
+    }
+}
+
+.contacts-list{
+    &__contacts-list-item{
+        padding: 5px;
+        width: 100%;
+        background-color: #b1ebf3;
+        border: 3px solid #88d1db;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        .interface-btn{
+            margin-right: 10px;
+        }
+    }
+}
+
+.inner{
+    padding: 10px;
+    background-color: #b1ebf3;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #88d1db;
+    .input, .label{
+        display: block;
+    }
+    &__close-btn{
+        width: 40px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+}
+
+.edit-popup{
+    position: fixed;
+    opacity: 0;
+    z-index: -1;
+}
+
+.edit-popup--active{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    &__inner{
+        position: fixed;
+        width: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+    }
+}
